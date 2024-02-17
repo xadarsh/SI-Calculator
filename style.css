@@ -1,0 +1,114 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1b6c94;
+    font-family:"Poppins",sans-serif;
+    /* width: 100vh; */
+}
+h1{
+    text-align: center;
+    /* position: relative; */
+    /* left: 50%; */
+    color: #80a7bb;
+    text-shadow: 0 5px 10px rgba(0,0,0,1.4);
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: 800;
+    text-decoration: underline;
+    margin: 20px 10px;
+}
+.container{
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    /* min-width: 350px; */
+    /* height: 470px; */
+    /* position: relative;
+    top: 25px;
+    left: 50%; */
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,1.4);
+}
+.data input{
+    color: rgba(24, 23, 23, 0.904);
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    width: 47%;
+    padding: 8px;
+    border: none;
+    border-bottom: 1px solid black;
+    /* margin-right: 10px; */
+}
+.data input:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #1b6c94;
+}
+.data label{
+    font-weight: 500;
+    /* margin-right: 130px; */
+}
+.rate{
+    position:absolute;
+    right: 38%;
+}
+.data{
+    font-size: 1.5rem;
+}
+#time{
+    width: 62%;
+}
+#period{
+    text-align: left;
+    outline: none;
+    font-size: 1.2rem;
+    width: 30%;
+}
+button{
+    /* position: relative;
+    left: 35%; */
+    display: block;
+    width: 30%;
+    height: 10%;
+    text-align: center;
+    padding:10px;
+    font-size: 1.2rem;
+    background-color: #1b6c94;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 30px auto;
+    transition: all ease 0.1s;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #1b89c0;
+}
+button:active{
+    transform: scale(0.9);
+}
+.result{
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 20px auto;
+    background-color: #1b89c05d;
+    border-radius: 10px;
+    /* height: 150px; */
+    line-height: 50px;
+    padding: 20px 0;
+
+}
+.result input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: 40%;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    /* height: 30px; */
+}

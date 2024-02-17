@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI Calculator</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script language="javascript">
+        function claculate()
+        {
+            let pri, rate, time, period;
+            pri = parseInt(document.getElementById("principal").value);
+            rate = parseFloat(document.getElementById("rate").value);
+            time = parseInt(document.getElementById("time").value);
+            period = document.getElementById("period").value;
+
+            let principalAmount, totalInterest, totalAmount;
+            
+            if (period === "year") {
+                totalInterest = (pri * rate * time) / 100;
+                // totalInterest = principalAmount;
+                totalAmount = pri + totalInterest;
+            } else if (period === "month") {
+                principalAmount = (pri * rate * time) / 1200;
+                totalInterest = principalAmount;
+                totalAmount = pri + principalAmount;
+            } else {
+                alert("Please check all the details.");
+                return;
+            }
+
+            document.getElementById("pri-amount").value = "₹"+pri.toFixed(2);
+            document.getElementById("total-intrest").value = "₹"+totalInterest.toFixed(2);
+            document.getElementById("total-amount").value = "₹"+totalAmount.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h1>Simple intrest Calculator</h1>
+    <div class="container">
+        <div class="data">
+            <label for="principal">Principal(₹):</label>
+            <label for="rate" class="rate">Rate:</label>
+            <br>
+            <input type="number" id="principal">
+            <input type="number" id="rate">
+            <br>
+            <label for="time">Time:</label>
+            <br>
+            <input type="number" id="time">
+            <select name="period" id="period">
+                <option value="#">-Select-</option>
+                <option value="year">Year</option>
+                <option value="month">Month</option>
+            </select>
+            <br>
+            <button onclick="claculate()">Calculate</button>
+        </div>
+        <div class="result">
+            <label for="pri-amount">Princial Amount:</label>
+            <input type="text" id="pri-amount" disabled>
+            <br>
+            <label for="total-intrest">Total Intrest:</label>
+            <input type="text" id="total-intrest" disabled>
+            <br>
+            <label for="total-amount">Total Amount:</label>
+            <input type="text" id="total-amount" disabled>
+            <br>
+        </div>
+    </div>
+
+</body>
+</html>
