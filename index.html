@@ -13,9 +13,9 @@
         function claculate()
         {
             let pri, rate, time, period;
-            pri = parseInt(document.getElementById("principal").value);
+            pri = parseFloat(document.getElementById("principal").value);
             rate = parseFloat(document.getElementById("rate").value);
-            time = parseInt(document.getElementById("time").value);
+            time = parseFloat(document.getElementById("time").value);
             period = document.getElementById("period").value;
 
             let principalAmount, totalInterest, totalAmount;
